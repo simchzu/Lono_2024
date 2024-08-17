@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lono</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 메인 화면 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lono</div>
+            <ul class="nav-links">
+                <li><a href="new.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-button">Get Started</button>
+        </nav>
+    </header>
+
+    <section id="main-screen" class="hero">
+        <div class="hero-content">
+            <h1>Unlock the Power of Cellular Analysis</h1>
+            <p>Leading the future of cellular technology with Lono</p>
+            <input type="file" id="fileInput" class="hidden"/>
+            <button id="uploadButton" class="btn-primary">Upload Image</button>
+        </div>
+    </section>
+
+    <!-- 분석 중 화면 -->
+    <div id="analysis-screen" class="hidden">
+        <div class="analysis-content">
+            <h2>Analysis in Progress</h2>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div id="analysis-status">Analyzing... 0%</div>
+        </div>
+    </div>
+
+    <!-- 분석 완료 화면 -->
+    <div id="result-screen" class="hidden">
+        <section class="result-content">
+            <h2>Analysis Results</h2>
+            <div class="result-flex">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div id="finalResults">
+                    <div id="old-cells-result">Old: 63.2%</div>
+                    <div id="young-cells-result">Young: 34.8%</div>
+                    <div id="total-cells-result">Total Cells: 134</div>
+                    <div id="accuracy-result">Accuracy: 99.8%</div>
+                </div>
+            </div>
+            <button id="restartAnalysis" class="btn-secondary">Restart Analysis</button>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2024 Lono. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+</html>
